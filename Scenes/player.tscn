@@ -113,4 +113,4 @@ script = ExtResource("1_vyo4p")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_coq5w")
 animation = &"front-idle"
-frame_progress = 0.105987
+frame_progress = 0.458301
