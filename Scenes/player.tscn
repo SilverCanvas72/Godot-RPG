@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dym5suit2sadp"]
+[gd_scene load_steps=17 format=3 uid="uid://dym5suit2sadp"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_vyo4p"]
 [ext_resource type="Texture2D" uid="uid://civ8tmmuajqfk" path="res://Assets/Idle Animations.png" id="2_khjoj"]
@@ -105,12 +105,19 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_pj0c4"]
+radius = 8.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_vyo4p")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_coq5w")
 animation = &"front-idle"
 frame_progress = 0.458301
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_pj0c4")
